@@ -1,0 +1,25 @@
+{
+    "name": "maithemewp/mai-starter",
+    "authors": [
+        {
+            "name": "BizBudding",
+            "email": "team@bizbudding.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/maithemewp/mai-installer"
+        }
+    ],
+    "require": {
+        "maithemewp/mai-installer": "dev-master"
+    },
+    "minimum-stability" : "dev",
+    "prefer-stable": true,
+    "config": {
+      "preferred-install": {
+        "*": "dist"
+      }
+    }
+}
