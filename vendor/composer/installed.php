@@ -1,13 +1,13 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-develop',
-    'version' => 'dev-develop',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => '4577d8e85ae4a7e2c81a19dec4ca425b27f6da9b',
-    'name' => 'maithemewp/mai-starter',
+    'reference' => '2a3651d8f090a76e7055da03df0ef8a43773dbe3',
+    'name' => 'maithemewp/mai-sleek',
   ),
   'versions' => 
   array (
@@ -39,14 +39,14 @@
       ),
       'reference' => 'ab01c60c49a9f20a50d59adf329715145cb311ea',
     ),
-    'maithemewp/mai-starter' => 
+    'maithemewp/mai-sleek' => 
     array (
-      'pretty_version' => 'dev-develop',
-      'version' => 'dev-develop',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '4577d8e85ae4a7e2c81a19dec4ca425b27f6da9b',
+      'reference' => '2a3651d8f090a76e7055da03df0ef8a43773dbe3',
     ),
   ),
 );
