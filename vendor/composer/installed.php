@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '7384e1ad9e82d546e5a36f283244e8477e377980',
+    'reference' => 'ea0d99b023e5e8d6e6a779ec20ff1e9377a1c0e3',
     'name' => 'maithemewp/mai-sleek',
   ),
   'versions' => 
@@ -46,7 +46,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '7384e1ad9e82d546e5a36f283244e8477e377980',
+      'reference' => 'ea0d99b023e5e8d6e6a779ec20ff1e9377a1c0e3',
     ),
   ),
 );
