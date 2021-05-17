@@ -7,11 +7,13 @@
  * @author    BizBudding
  * @copyright Copyright © 2020 BizBudding
  * @license   GPL-2.0-or-later
- * @version   1.2.0
+ * @version   1.2.1
  */
 
 /**
  * Add theme support for Mai Engine.
+ * Default Mai Engine themes are already supported
+ * so let's check first.
  *
  * Default Mai Engine themes are already supported so let's check first.
  *
@@ -50,7 +52,7 @@ function mai_plugin_dependencies() {
 			'slug'     => 'mai-engine/mai-engine.php',
 			'uri'      => 'maithemewp/mai-engine',
 			'branch'   => 'master',
-			'optional' => false,
+			'required' => true,
 		],
 	] );
 
@@ -69,7 +71,7 @@ add_action( 'admin_init', 'mai_theme_redirect', 100 );
 function mai_theme_redirect() {
 	global $pagenow;
 
-	if ( 'themes.php' === $pagenow && is_admin() && isset( $_GET['activated'] ) ) {
+	if ( function_exists( 'mai_get_engine_theme' ) && 'themes.php' === $pagenow && is_admin() && isset( $_GET['activated'] ) ) {
 		exit( wp_redirect( admin_url( 'admin.php?page=mai-setup-wizard' ) ) );
 	}
 }
