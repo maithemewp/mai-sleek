@@ -20,6 +20,8 @@ use Composer\Semver\VersionParser;
 
 
 
+
+
 class InstalledVersions
 {
 private static $installed = array (
@@ -30,28 +32,29 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '9f624da631fe3d7d0e5b126805f20e3ee1c8428e',
+    'reference' => '203432af95b93551a24f88b2a5bf82181d806385',
     'name' => 'maithemewp/mai-sleek',
   ),
   'versions' => 
   array (
     'afragen/wp-dependency-installer' => 
     array (
-      'pretty_version' => '3.1.0',
-      'version' => '3.1.0.0',
+      'pretty_version' => '4.2.2',
+      'version' => '4.2.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '65570a1eb966bb9adfc9d9e521357da080fbdc5a',
+      'reference' => '5e5419348c6cde7b02f3c33fb3fc3381062443a1',
     ),
-    'collizo4sky/persist-admin-notices-dismissal' => 
+    'afragen/wp-dismiss-notice' => 
     array (
-      'pretty_version' => '1.4.4',
-      'version' => '1.4.4.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
+        0 => '9999999-dev',
       ),
-      'reference' => '900739eb6b0ec0210465f5983a6d4e0e420289e4',
+      'reference' => '21949732f1ea21d81500bdda8f882ac7eb0f98af',
     ),
     'maithemewp/mai-installer' => 
     array (
@@ -61,7 +64,7 @@ private static $installed = array (
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'e6bff471a1d542c848f7247fe3cf018836c2204f',
+      'reference' => '244cf7604a6b34a4662c29385497d4257f175956',
     ),
     'maithemewp/mai-sleek' => 
     array (
@@ -70,7 +73,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '9f624da631fe3d7d0e5b126805f20e3ee1c8428e',
+      'reference' => '203432af95b93551a24f88b2a5bf82181d806385',
     ),
   ),
 );
@@ -89,7 +92,6 @@ $packages = array();
 foreach (self::getInstalled() as $installed) {
 $packages[] = array_keys($installed['versions']);
 }
-
 
 if (1 === \count($packages)) {
 return $packages[0];
@@ -254,9 +256,23 @@ return $installed[0]['root'];
 
 
 
+
 public static function getRawData()
 {
+@trigger_error('getRawData only returns the first dataset loaded, which may not be what you expect. Use getAllRawData() instead which returns all datasets for all autoloaders present in the process.', E_USER_DEPRECATED);
+
 return self::$installed;
+}
+
+
+
+
+
+
+
+public static function getAllRawData()
+{
+return self::getInstalled();
 }
 
 
@@ -286,6 +302,7 @@ self::$installedByVendor = array();
 
 
 
+
 private static function getInstalled()
 {
 if (null === self::$canGetVendors) {
@@ -295,7 +312,6 @@ self::$canGetVendors = method_exists('Composer\Autoload\ClassLoader', 'getRegist
 $installed = array();
 
 if (self::$canGetVendors) {
-
 foreach (ClassLoader::getRegisteredLoaders() as $vendorDir => $loader) {
 if (isset(self::$installedByVendor[$vendorDir])) {
 $installed[] = self::$installedByVendor[$vendorDir];
