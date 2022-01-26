@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '2bb07036f48afe322177a98b2c9d324e7d518b18',
+    'reference' => '1592cc4af50f277d03cf6ca425ae902b1b915f2e',
     'name' => 'maithemewp/mai-sleek',
   ),
   'versions' => 
@@ -52,7 +52,7 @@ private static $installed = array (
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '1b637076d114af7762855493b9bac009a6272d5c',
+      'reference' => '44561c1f7bb4bb0022787bb44974b573b2bca72d',
     ),
     'maithemewp/mai-sleek' => 
     array (
@@ -61,7 +61,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '2bb07036f48afe322177a98b2c9d324e7d518b18',
+      'reference' => '1592cc4af50f277d03cf6ca425ae902b1b915f2e',
     ),
   ),
 );
