@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '1592cc4af50f277d03cf6ca425ae902b1b915f2e',
+    'reference' => 'dbc43834d130e0c4ee16cef8a307a73877d5c681',
     'name' => 'maithemewp/mai-sleek',
   ),
   'versions' => 
@@ -26,7 +26,7 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => '44561c1f7bb4bb0022787bb44974b573b2bca72d',
+      'reference' => '399fec687a9459b774c1bd1c44a38a806dfa052f',
     ),
     'maithemewp/mai-sleek' => 
     array (
@@ -35,7 +35,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '1592cc4af50f277d03cf6ca425ae902b1b915f2e',
+      'reference' => 'dbc43834d130e0c4ee16cef8a307a73877d5c681',
     ),
   ),
 );
